@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Open sans', sans-serif;
+}
+body {
+    display: grid;
+    grid-template-columns: 250px 1fr 250px;
+    grid-template-rows: 60px 1fr;
+    background-image: url(../photos/hero-market.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%; min-height: 100vh;
+}
+header {
+    width: 100%; height: 60px;
+    position: fixed;
+    z-index: 9999;
+    background-color: #ffffff;
+    box-shadow: 0px 3px 2px 1px rgba(0, 0, 0, 0.10);
+}
+header .inner {
+    display: grid;
+    grid-template-columns: 250px 1fr 450px 250px;
+    grid-template-rows: 60px;
+}
+header .inner div.title {
+    grid-column: 1/1;
+    grid-row: 1/1;
+    line-height: 60px;
+    background-image: url(../photos/hero-market.jpg);
+    color: red;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+header .inner div.title h1 {
+    font-weight: bold;
+    font-size: 32px;
+    padding-left: 8px;
+}
+header div.inner div.menu {
+    grid-column: 3/4;
+    grid-row: 1/1;
+}
+header div.inner div.menu nav {
+    width: 100%;
+}
+header div.inner div.menu nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 60px;
+    list-style-type: none;
+}
+header div.inner div.menu nav ul li {
+    float: left;
+    text-align: center;
+}
+header div.inner div.menu nav ul li.active {
+    font-weight: bold;
+}
+header div.inner div.menu nav ul li a {
+    color: #000;
+    text-decoration: none;
+    line-height: 60px;
+    width: 100%; height: 100%;
+}
+header div.inner div.menu nav ul li:nth-child(1) {
+    grid-column: 1/1;
+    grid-row: 1/1;
+}
+header div.inner div.menu nav ul li:nth-child(2) {
+    grid-column: 2/3;
+    grid-row: 1/1;
+}
+header div.inner div.menu nav ul li:nth-child(3) {
+    grid-column: 3/4;
+    grid-row: 1/1;
+}
+header div.inner div.menu nav ul li:nth-child(4) {
+    grid-column: 4/5;
+    grid-row: 1/1;
+}
+header div.inner div.user {
+    grid-column: 4/5;
+    grid-row: 1/1;
+}
+header div.inner div.user figure {
+    height: 100%;
+    padding-left: 8px;
+}
+header div.inner div.user figure div.name {
+    float: left;
+    line-height: 60px;
+    padding-left: 10px;
+}
+header div.inner div.user figure figcaption {
+    float: right;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin-right: 50px;
+}
+header div.inner div.user figure figcaption img {
+    border-radius: 50%;
+    width: 48px; height: 48px;
+}
+/* Header done */
+section.left-menu {
+    grid-column: 1/1;
+    grid-row: 1/-1;
+    background-color: #ffffff;
+    padding-top: 63px;
+}
+section.left-menu ul.menu li {
+    width: 100%;
+    float: left;
+    border-bottom: 2px solid #EEE;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select:none;
+    user-select:none;
+    -o-user-select:none;
+}
+section.left-menu ul.menu li div.top {
+    width: 100%; min-height: 50px;
+    float: left;
+    background-color: #fafafa;
+    cursor: pointer;
+}
+section.left-menu ul.menu li div.top div {
+    float: left;
+    line-height: 50px;
+    font-size: 16px;
+}
+section.left-menu ul.menu li div.top div.icon {
+    padding-left: 18px;
+
+}
+section.left-menu ul.menu li div.top div.text {
+    padding: 0px 16px;
+}
+section.left-menu ul.menu li div.bottom {
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+    height: 60px;
+    overflow: hidden;
+    padding: 10px 8px;
+    word-break: break-all;
+}
+section.left-menu ul.menu li div.hidden {
+    height: 0px;
+    width: 100%;
+    padding: 0px 8px;
+}

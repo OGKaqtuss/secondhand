@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+:root {
+    --logo-width: 40px;
+    --front-page-height: 80vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Open sans', sans-serif;
+    height: 200vh;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+#toTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 999;
+    background-color: white;
+    padding: 8px 12px 8px 12px;
+    border-radius: 10px;
+    color: lightgreen;
+}
+
+#main-page {
+    height: 100vh;
+}
+
+.front-header {
+    height: 120px;
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+}
+
+.inner-header {
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+    height: 100%;
+    line-height: 2.5em;
+    letter-spacing: 0.23em;
+}
+
+.logo {
+    float: left;
+    padding: 22px;
+    color: white;
+    font-size: 24px;
+}
+
+#logoImg {
+    position: absolute;
+    width: var(--logo-width); height: var(--logo-width);
+}
+
+.logo-text {
+    margin-left: calc(5px + var(--logo-width));
+}
+
+.header-links {
+    float: right;
+}
+
+.header-links ul li {
+    list-style: none;
+    padding: 22px;
+    display: inline-block;
+}
+
+#cover {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 2;
+}
+
+#frontPage {
+    height: var(--front-page-height);
+    position: absolute;
+    width: 100%;
+    z-index: 99;
+    overflow: hidden;
+}
+
+#frontPage .image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../photos/hero-market.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(1.1);
+}
+
+.inner-front-page {
+    height: calc(var(--front-page-height) - 120px);
+    margin: 40px;
+    margin-top: 120px;
+    z-index: 999;
+}
+
+.front-small-box {
+    position: relative;
+    height: 100%;
+    margin-left: 40px; margin-right: 40px;
+}
+
+#triangle {
+    bottom: 20%;
+    width: 0;
+    height: 0;
+    border-left: 90px solid transparent;
+    border-right: 90px solid transparent;
+    border-bottom: 85px solid #16191E;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+}
+
+#triangle i {
+    text-align: center;
+    top: 30px;
+    left: -15.5px;
+    font-size: 36px;
+    position: relative;
+    color: lightgreen;
+}
+
+#frontPageFooter {
+    width: 100%;
+    height: calc(100vh - var(--front-page-height));
+    bottom: 0;
+    position: absolute;
+    background-color:#16191E; 
+    z-index: 99;
+}
+
+/* 2ND SECTION START */
+#page1 {
+    height: 100vh;
+    width: 100%;
+    background-color: #16191E;
+}
+
+#page1Footer {
+    width: 100%;
+    height: calc(100vh - 50vh);
+    bottom: -100vh;
+    position: absolute;
+    background-color: lightgreen; 
+    z-index: 99;
+    -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+}
+
+
+/* NAVIGATOR CIRCLES */
+
+.left-page-navigator {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+}
+
+.left-page-navigator ul {
+    position: relative;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	cursor: default;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none; 
+}
+
+.left-page-navigator li {
+    position: relative;
+	display: block;
+	margin: 16px;
+	width: 12px;
+	height: 12px;
+    cursor: pointer;
+}
+
+.left-page-navigator li a {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	outline: none;
+	border-radius: 50%;
+	background-color: #fff;
+	background-color: rgba(255, 255, 255, 0.2);
+	text-indent: -999em; /* make the text accessible to screen readers */
+	cursor: pointer;
+	position: absolute;
+}
+
+.left-page-navigator li a:focus {
+	outline: none;
+}
+
+/* Stroke */
+
+.left-page-navigator li a {
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
+	-webkit-transition: box-shadow 0.3s ease, background-color 0.3s ease;
+	transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.left-page-navigator li a:hover,
+.left-page-navigator li a:focus {
+	background-color: white;
+}
+
+.left-page-navigator li.current a {
+	background-color: transparent;
+	box-shadow: 0 0 0 2px white;
+}
+
