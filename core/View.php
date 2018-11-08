@@ -7,9 +7,9 @@ class View {
         
     }
     
-    public function render($viewName) {
+    public function render($viewName, $viewData) {
 
-        $this->variables = (object) $this->variables;
+        $this->viewData = $viewData;
 
         $viewAry = explode('/', $viewName);
         $viewString = implode(DS, $viewAry);

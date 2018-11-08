@@ -7,14 +7,8 @@ class Home extends Controller {
     
     public function indexAction() {
         $db = DB::getInstance();
-        $contacts = $db->find('contacts', [
-            'conditions' => ['fname = ?', 'lname = ?'],
-            'bind' => ['Mads', 'Rigtved'],
-            'order' => "lname, fname",
-            'limit' => 5
-        ]);
-        //dnd($contacts);
-        $this->view->render('home/index');
+        $data = new stdClass();
+        $this->view->render('home/index', $data);
     }
     
 }
